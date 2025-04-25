@@ -10,6 +10,7 @@
     <div class="nav-bar">
         <h1>Weather App</h1>
     </div>
+
     <div class="container">
         <div class="main-div">
             <div class="search-div">
@@ -18,8 +19,36 @@
                     <div class="search-icon"></div>
                 </div>
             </div>
+
+            <!--Invalid Message Div-->
+            <div class="invalid-msg-div">
+                <p class="invalid-msg">Invalid City Entered!</p>
+            </div>
+
+            <!--Weather-->
+            <div class="weather">
+                <img src="Images/clear.png" alt="Weather Img">
+
+                <!--Div for temperature-->
+                <div class="temperature-div">
+                    <p id="temperature">25<sup>o</sup>C</p>
+                </div>
+
+                <!--Div for humidity & wind speed-->
+                <div class="humidity-windspeed">
+                    <div class="humidity">
+                        <h2>Humidity</h2>
+                        <p>21%</p>
+                    </div>
+                    <div class="windspeed">
+                        <h2>Wind Speed</h2>
+                        <p>8 km/h</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
