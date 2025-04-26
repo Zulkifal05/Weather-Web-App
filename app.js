@@ -15,7 +15,7 @@ const city_name = document.querySelector("#city-name-head");
 async function GetWeather(city) {
     let response = await fetch(URL + city + API_KEY);
 
-    if (response.status === 200) {
+    if (response.status === 200) {  // If the valid city is entered & API response fetched
         let data = await response.json();  // Data changed to JS Object
 
         //Updating Temp , Humidity , Wind Speed & City Name
@@ -53,7 +53,13 @@ async function GetWeather(city) {
         weather_div.style.display = "flex";
         invalid_msg.style.display = "none";
     }
-    else {
+    else if (search_input.value === "") {  // Check for empty search box
+        invalid_msg.innerText = "Enter Any City!";
+        weather_div.style.display = "none";
+        invalid_msg.style.display = "flex";
+    }
+    else {  // For invalid city entered
+        invalid_msg.innerText = "Invalid Entry!";
         weather_div.style.display = "none";
         invalid_msg.style.display = "flex";
     }
