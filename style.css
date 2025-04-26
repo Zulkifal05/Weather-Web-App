@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-    height: 80vh;
+    height: 70vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -108,6 +108,16 @@ body {
 
 .weather img {
     height: 7rem;
+}
+
+.city-name-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#city-name-head {
+    color: #1DCD9F;
 }
 
 #temperature {
